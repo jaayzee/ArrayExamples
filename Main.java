@@ -173,7 +173,14 @@ class Main
           *    ar2[2]=2
           *    ar2[3]=3  ->  ar2odds[1]=3
           */
-        int[] ar2odds = new int[4]
+        int[] ar2odds = new int[4];
+        for (int i=0 ; i<ar2.length-1 ; i++)
+        {
+            if(ar2[i]%2 == 1)
+            {
+                ar2odds[i] = ar2[i];
+            }
+        }
         /*
          * Task 9. In the array ar2, count how many odd numbers you
          * have.  Then create an ew array called ar4.  Copy just the odd
