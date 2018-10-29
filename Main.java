@@ -268,7 +268,43 @@ class Main
          *  
          *  Count how many words have more than 5 letters.
          */
-        
+        System.out.println("** Task 12 **");
+        String[] ar5 = new String[16];
+        ar5[0]="Four";
+        ar5[1]="score";
+        ar5[2]="and";
+        ar5[3]="seven";
+        ar5[4]="years";
+        ar5[5]="ago";
+        ar5[6]="our";
+        ar5[7]="fathers";
+        ar5[8]="brought";
+        ar5[9]="forth";
+        ar5[10]="on";
+        ar5[11]="this";
+        ar5[12]="continent";
+        ar5[13]="a";
+        ar5[14]="new";
+        ar5[15]="nation";
+        for(int i = 0; i<ar5.length; i++)
+        {
+            System.out.println(ar5[i]);
+        }
+        int[] ar6 = new int[16];
+        for(int i = 0; i<ar6.length; i++)
+        {
+            ar6[i] = ar5[i].length();
+            System.out.println(ar6[i]);
+        }
+        int count = 0;
+        for(int i = 0; i<ar6.length; i++)
+        {
+            if(ar6[i]>5)
+            {
+                count = count+1;
+            }
+        }
+        System.out.println(count);
         /*
          * Task 13
          * Create an array called monsterArray of 5 Monsters.
@@ -283,7 +319,23 @@ class Main
          * Use a for loop to print out the names of monster that start with
          * a vowel
          */
-        
+        System.out.println("** Task 13 **");
+        String[] monmon = new String[5];
+        monmon[0] = "Cookie";
+        monmon[1] = "Grover";
+        monmon[2] = "Oscar the Grouch";
+        monmon[3] = "Elmo";
+        monmon[4] = "Rosita";
+        for(int i = 0; i<monmon.length; i++)
+        {
+            System.out.println("["+i+"]"+monmon[i]);
+        }
+        for(int i =0; i<monmon.length; i++)
+        {
+            char c = monmon[i].toLowerCase().charAt(0);
+            if(c == 'a'||c == 'e'||c == 'i'||c == 'o'||c == 'u')
+            System.out.println(monmon[i]);
+        }
          /*
           * Task 14
           * Create an array of integers from 3 to 94 and call it arx
@@ -299,7 +351,29 @@ class Main
           *      So arindex[0]=2
           *         arindex[1]=5
           */
-         
+          int start = 3;
+          int end = 94;
+          int n14=end - start+1;
+          int[] arx = new int[n14];
+          int count14index=0;
+          for (int i=0 ; i<n14 ; i++)
+          {
+              arx[i]=start+i;
+              if (arx[i]%3==0)
+              count14index++;
+          }
+          int[] arxindex = new int[count14index];
+          int k14=0;
+          for (int i=0 ; i<n14 ; i++)
+          {
+              if (arx[i]%3==0)
+              { 
+                  arxindex[k14]=i;
+                  k14++;
+              }
+          } 
+          for (int i=0 ; i<count14index; i++)
+          System.out.println(arxindex[i]);
          /*
           * Create an arrary called "fb" and calculate the
           * first 10 fibonacci sequence.  You start with
