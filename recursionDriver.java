@@ -13,32 +13,50 @@ public class recursionDriver
     */ 
      int counted=0;
      // Task 1.
-     counted = count1(10);
-     System.out.println(counted);
- }
- 
+     System.out.println(count1(10));
+     System.out.println(count2(12));
+     System.out.println(count3(8));
+     System.out.println(count4(13));
+     System.out.println(count5(12));
+    }
  public static int count1(int a)
  {
-     if(a<1)
+     if(a==0)
      {
          return 0;
      }
-     return 4+(a-1);
+     return 4+count1(a-1);
  }
  public static int count2(int a)
  {
-     
+     if(a==0)
+     {
+         return 0;
+     }
+     return 20+count2(a-1);
  }
  public static int count3(int a)
  {
-     
+     if(a==0)
+     {
+         return 0;
+     }
+     return 10+count3(a-1);
  }
  public static int count4(int a)
  {
-     
+     if(a<=0)
+     {
+         return 0;
+     }
+     return a+count4(a-2);
  }
  public static int count5(int a)
  {
-     
+     if(a<=0)
+     {
+         return 0;
+     }
+     return a+count5(a-2);
  }
 }
